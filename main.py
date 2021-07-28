@@ -53,6 +53,7 @@ def run_game():
     while not game_over:
 
         while game_close:
+
             game_display.fill(black)
             game_over_message = message_font.render("Game Over!", True, red)
             game_display.blit(game_over_message, [width / 3, height / 3])
@@ -66,7 +67,7 @@ def run_game():
                         game_close = False
                     if event.key == pygame.K_2:
                         run_game()
-                if event.type == pygame.QUIT():
+                if event.type == pygame.QUIT:
                     game_over = True
                     game_close = False
 
